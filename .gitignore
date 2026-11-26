@@ -1,0 +1,11 @@
+# Cấu hình môi trường cục bộ và CSDL SQLite cục bộ
+.env
+database/*.sqlite
+database/*.db
+logs/*.log
+
+# Tệp hệ điều hành & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

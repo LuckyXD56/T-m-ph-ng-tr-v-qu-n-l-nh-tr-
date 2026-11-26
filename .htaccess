@@ -1,0 +1,12 @@
+# Không cho phép liệt kê thư mục
+Options -Indexes
+
+# Chặn truy cập tệp nhạy cảm và thư mục nội bộ trên Apache
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(\.env|\.env\.example|\.git|config|includes|database) - [R=404,L]
+</IfModule>
+
+<FilesMatch "\.(sql|sqlite|db|log|bak|ini|env)$">
+    Require all denied
+</FilesMatch>

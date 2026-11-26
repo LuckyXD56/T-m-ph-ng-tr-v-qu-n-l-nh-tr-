@@ -1,0 +1,10 @@
+Options -Indexes
+
+# Cấm thực thi mọi tệp kịch bản trong thư mục uploads
+<FilesMatch "\.(php|php\d|phtml|phar|pl|py|jsp|asp|sh|cgi)$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
